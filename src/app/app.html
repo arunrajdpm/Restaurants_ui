@@ -1,0 +1,22 @@
+<main>
+   
+  <input type="text" ng-model="app.searchBy" ng-change="app.updateRes()" />  
+   <div class="main_container">
+    <div class="res_container">
+      <div class="res_card" ng-repeat="res in app.restaurants track by res.resId">
+        <span>{{ res.restName }}</span> - <span>{{ res.resRating }}</span>
+        <div  class='food_card' ng-repeat="food in res.foodList track by food.name"> {{ food.name }}  - {{ food.price }}
+           <button class="add_button" ng-click='app.addOrder(food, res.resId)'>+</button></div>
+      </div>
+    </div>
+  
+    <div>
+      Total Price : {{ app.getPrice() }}
+      <div   ng-repeat="res in app.orders track by $index">
+          {{ res.name }}  - {{ res.price }}
+      </div>
+      <div><button class="place_order" ng-click='app.placeOrder(1)'>place order</button></div>
+    </div>
+   </div>
+  
+</main>

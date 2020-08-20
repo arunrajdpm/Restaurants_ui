@@ -1,0 +1,47 @@
+/* styles in src/style directory are applied to the whole page */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+a {
+  color: #03A9F4;
+}
+
+.res_container {
+   display: flex;
+   width: 70%;
+   flex-flow: row wrap;
+}
+.main_container {
+  display: flex;
+  width: 90%;
+  flex-flow: row wrap;
+}
+
+.place_order{
+  margin-top: 0.6em;
+}
+
+.food_card {
+  padding: 0.4em;
+}
+
+.add_button {
+  background-color: aqua; 
+  border: none; 
+  color: white;
+  font-size: 14px;
+  border-radius: 42px;
+  cursor: pointer; 
+} 
+
+.res_card {
+  height: 5em;
+  width: 15em;
+  padding: 1em 0;
+  margin: 1em 0 0 1em;
+  
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
